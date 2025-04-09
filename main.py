@@ -66,7 +66,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown("data_scientist: ds_pass_123 /n analyst: analyst_pass_456")
+st.markdown("data_scientist: ds_pass_123 <br> analyst: analyst_pass_456")
 # Clear session state when switching roles
 if 'previous_role' not in st.session_state:
     st.session_state.previous_role = None
