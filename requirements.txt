@@ -6,3 +6,7 @@ pandas
 keras
 pyyaml
 nltk
+cryptography
+datetime
+hashlib
+bcrypt
