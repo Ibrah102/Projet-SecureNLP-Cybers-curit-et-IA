@@ -1,3 +1,4 @@
+cryptography
 tensorflow
 streamlit
 numpy
@@ -10,5 +11,4 @@ datetime
 hashlib
 nltk
 joblib
-cryptography
 bcrypt
