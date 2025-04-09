@@ -1,7 +1,7 @@
-tensorflow==2.18.0
-streamlit==1.44.1
-numpy==1.26.0
-scikit-learn==1.0.2
-pandas==2.2.3
-keras>=3.5.0
-pyyaml==6.0
+tensorflow
+streamlit
+numpy
+scikit-learn
+pandas
+keras
+pyyaml
