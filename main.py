@@ -58,7 +58,18 @@ def check_model_integrity(model_path):
 # ========================
 st.title("🔐 SecureNLP Sentiment Analysis")
 
+# Clear session state when switching roles
+if 'previous_role' not in st.session_state:
+    st.session_state.previous_role = None
+
 role = st.selectbox("Choose your role", ["data_scientist", "analyst"])
+
+# Reset predictions when role changes
+if role != st.session_state.previous_role:
+    st.session_state.encrypted_sentiment = None
+    st.session_state.decrypted_sentiment = None
+    st.session_state.previous_role = role
+
 password = st.text_input("Enter password", type="password")
 
 # Initialize session state
@@ -98,12 +109,11 @@ if role in USER_CREDENTIALS and bcrypt.checkpw(password.encode('utf-8'), USER_CR
                 st.session_state.decrypted_sentiment = cipher.decrypt(
                     st.session_state.encrypted_sentiment.encode()
                 ).decode()
-                st.success(f"🔍 Decrypted Sentiment: {st.session_state.decrypted_sentiment}")
                 log_action(f"{role} decrypted a prediction")
             else:
                 st.warning("Prediction already decrypted.")
+            
+            # Only show the green success message, not the duplicate
+            st.success(f"🔍 Decrypted Sentiment: {st.session_state.decrypted_sentiment}")
 else:
     st.warning("Incorrect password. Please try again.")
-
-if st.session_state.get('decrypted_sentiment'):
-    st.write(f"🔓 Decrypted Prediction: {st.session_state.decrypted_sentiment}")
