@@ -5,9 +5,10 @@ scikit-learn
 pandas
 keras
 pyyaml
-nltk
-cryptography
 fernet
 datetime
 hashlib
+nltk
+joblib
+cryptography
 bcrypt
