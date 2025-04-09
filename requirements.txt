@@ -1,6 +1,6 @@
 streamlit==1.44.1
 nltk==3.8.1
 joblib==1.3.2
-cryptography==42.0.4
+cryptography==41.0.5  # Changed from 42.0.4 to be compatible with pyOpenSSL
 bcrypt==4.0.1
 pyOpenSSL==23.3.0
