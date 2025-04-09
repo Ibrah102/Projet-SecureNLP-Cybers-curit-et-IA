@@ -60,8 +60,8 @@ st.title("🔐 SecureNLP Sentiment Analysis")
 st.markdown(
     """
     <div style="position: fixed; bottom: 10px; left: 10px; color: #888; font-size: 0.8em;">
-        name1<br>
-        name2
+        FOUITEH Ibrahim<br>
+        GHARBAOUI Hala
     </div>
     """,
     unsafe_allow_html=True
